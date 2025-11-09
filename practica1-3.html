@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica 1-3</title>
+    
+    <style>
+        :root {
+            --naranja-principal: #E65100; /* Naranja oscuro para títulos */
+            --naranja-secundario: #FB8C00; /* Naranja medio para acentos */
+            --fondo-claro: #FFF3E0;      /* Un fondo crema/naranja muy claro */
+            --texto-oscuro: #333;
+            --fondo-blanco: #FFFFFF;
+            --borde-sutil: #FFD180;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            background-color: var(--fondo-claro);
+            color: var(--texto-oscuro);
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            background-color: var(--fondo-blanco);
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            overflow: hidden; /* Para contener los bordes redondeados */
+        }
+
+        header {
+            background-color: var(--naranja-principal);
+            color: var(--fondo-blanco);
+            padding: 25px 30px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.2em;
+        }
+
+        main {
+            padding: 30px;
+        }
+
+        /* --- SECCIÓN DE VIDEO AÑADIDA --- */
+        .video-wrapper {
+            margin-bottom: 30px;
+            border: 1px solid var(--borde-sutil);
+            border-radius: 8px;
+            overflow: hidden; /* Para que el video respete el borde redondeado */
+        }
+
+        video {
+            width: 100%;
+            display: block;
+        }
+        /* --- FIN DE SECCIÓN DE VIDEO --- */
+
+        .leccion-seccion {
+            border-top: 3px solid var(--naranja-secundario);
+            padding-top: 20px;
+            margin-bottom: 40px; /* Espacio entre las lecciones */
+        }
+        
+        .leccion-seccion h2 {
+            color: var(--naranja-principal);
+            font-size: 1.9em;
+            margin-bottom: 10px;
+        }
+
+        .leccion-seccion h3 {
+            color: var(--naranja-principal);
+            font-size: 1.5em;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+
+        .leccion-seccion p {
+            font-size: 1.05em;
+            margin-bottom: 15px;
+        }
+        
+        /* Estilo para Metodología Paso a Paso */
+        .step-list {
+            list-style: none;
+            padding-left: 0;
+            counter-reset: step-counter; /* Inicia el contador de pasos */
+            margin-top: 20px;
+        }
+
+        .step-list li {
+            position: relative;
+            padding-left: 65px; /* Espacio para el número */
+            margin-bottom: 20px;
+            background-color: #fdfaf6; /* Un fondo muy sutil */
+            border: 1px solid var(--borde-sutil);
+            border-radius: 8px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            padding-right: 15px;
+        }
+
+        .step-list li::before {
+            content: counter(step-counter); /* Muestra el número del contador */
+            counter-increment: step-counter; /* Incrementa el contador */
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.6em;
+            font-weight: 700;
+            color: var(--naranja-principal);
+            background-color: var(--fondo-claro);
+            width: 36px;
+            height: 36px;
+            line-height: 36px;
+            text-align: center;
+            border-radius: 50%;
+        }
+
+        .step-list li strong {
+            display: block;
+            font-size: 1.15em;
+            color: var(--texto-oscuro);
+            margin-bottom: 5px;
+        }
+
+        .step-list li p {
+            margin: 0;
+            font-size: 1em;
+            line-height: 1.5;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em;
+            color: #777;
+            background-color: #f9f9f9;
+            border-top: 1px solid #eee;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <header>
+            <h1>Practica 1-3: Posavasos y Sólidos 3D</h1>
+        </header>
+
+        <main>
+
+            <section class="video-wrapper">
+                <video controls preload="metadata">
+                    <source src="video.webm" type="video/webm">
+                    Tu navegador no soporta el formato de video WEBM.
+                </video>
+            </section>
+            
+            <section class="leccion-seccion">
+                <h2>Paso 1: Boceto del Posavasos (Ejercicio de Práctica)</h2>
+                <p>Esta es una solución de video de ejercicios de práctica. Estarás creando un boceto para un posavasos imprimible en 3D.</p>
+
+                <h3>Metodología Paso a Paso</h3>
+                <ol class="step-list">
+                    <li>
+                        <strong>Configurar Unidades</strong>
+                        <p>En "Configuración del Documento", cambie las unidades predeterminadas a pulgadas [milímetros] si aún no lo ha hecho.</p>
+                    </li>
+                    <li>
+                        <strong>Guardar Archivo</strong>
+                        <p>Guarde el archivo de diseño como "Tumbler Coaster".</p>
+                    </li>
+                    <li>
+                        <strong>Crear Nuevo Componente</strong>
+                        <p>En el grupo "Ensamblar", cree un nuevo componente y asígnele el nombre "Posavasos".</p>
+                    </li>
+                    <li>
+                        <strong>Iniciar Boceto</strong>
+                        <p>Seleccione la herramienta "Crear Boceto" del grupo de creación.</p>
+                    </li>
+                    <li>
+                        <strong>Elegir Plano</strong>
+                        <p>Elija el plano XY.</p>
+                    </li>
+                    <li>
+                        <strong>Dibujar Rectángulo Central</strong>
+                        <p>En el menú desplegable "Crear", elija "Rectángulo" y luego "Rectángulo Central". Comience en el origen y dibuje un cuadrado.</p>
+                    </li>
+                    <li>
+                        <strong>Acotar Rectángulo</strong>
+                        <p>El cuadrado debe tener una dimensión de 4 por 4 pulgadas [120 por 120 milímetros]. Presione Intro.</p>
+                    </li>
+                    <li>
+                        <strong>Dibujar Círculo Central</strong>
+                        <p>Vaya al grupo de creación una vez más y elija "Círculo de Punto Central".</p>
+                    </li>
+                    <li>
+                        <strong>Acotar Círculo</strong>
+                        <p>Use el origen y dibuje un círculo de 3.5 pulgadas [95 milímetros].</p>
+                    </li>
+                    <li>
+                        <strong>Finalizar y Guardar</strong>
+                        <p>Haga clic en "Finalizar Boceto" y guarde el archivo.</p>
+                    </li>
+                </ol>
+            </section>
+            
+            <section class="leccion-seccion">
+                <h2>Paso 2: Creación del Vaso Sólido (Revolve, Shell y Fillet)</h2>
+                <p>Aprende a tomar un boceto 2D y crear un cuerpo sólido 3D. Utilizarás las funciones de extrusión (como demostración), revolución, vaciado (shell) para ahuecar el sólido y empalme (fillet) para redondear los bordes.</p>
+
+                <h3>Metodología Paso a Paso (Corregida)</h3>
+                <ol class="step-list">
+                    <li>
+                        <strong>Abrir Boceto del Vaso</strong>
+                        <p>Abra el boceto de "Tumbler" (el perfil del vaso, no el posavasos) desde el panel de datos.</p>
+                    </li>
+                    <li>
+                        <strong>Demostración: Extrusión</strong>
+                        <p>Presione la tecla "E" (Extrusión). Haga clic en el perfil del boceto e ingrese una distancia de 1 pulgada [25.4 mm]. Observe el resultado.</p>
+                    </li>
+                    <li>
+                        <strong>Deshacer Extrusión</strong>
+                        <p>Este no es el resultado deseado. Haga clic en el botón "Deshacer" (Undo) para eliminar la operación de extrusión.</p>
+                    </li>
+                    <li>
+                        <strong>Reorientar la Vista</strong>
+                        <p>Vuelva al boceto. En el ViewCube (cubo de vistas), elija la vista "Front" (Frontal) para ver el perfil 2D claramente.</p>
+                    </li>
+                    <li>
+                        <strong>Seleccionar Herramienta Revolve</strong>
+                        <p>En el menú "Crear" (Create), seleccione "Revolve" (Revolución).</p>
+                    </li>
+                    <li>
+                        <strong>Verificar Perfil (Profile)</strong>
+                        <p>Fusion es intuitivo. Como solo hay un perfil cerrado, debería seleccionarse automáticamente (se pondrá azul).</p>
+                    </li>
+                    <li>
+                        <strong>Seleccionar Eje (Axis)</strong>
+                        <p>Haga clic en "Seleccionar" junto a "Axis". Elija la línea vertical de 9 pulgadas (228.6 mm) que dibujó en el origen. Verá una vista previa del vaso.</p>
+                    </li>
+                    <li>
+                        <strong>Confirmar Revolve como Componente</strong>
+                        <p>En el cuadro de diálogo de Revolve, asegúrese de que la Operación (Operation) esté configurada como "Nuevo Componente" (New Component) y haga clic en "Aceptar".</D>
+                    </li>
+                    <li>
+                        <strong>Renombrar Componente</strong>
+                        <p>En el navegador (Browser) a la izquierda, haga doble clic en el nuevo componente (ej: "Component1:1") y cámbiele el nombre a "Tumbler". Presione Entrar.</p>
+                    </li>
+                    <li>
+                        <strong>Seleccionar Herramienta Shell (Vaciado)</strong>
+                        <p>En la barra de herramientas, vaya al menú "Modificar" (Modify) y elija "Shell" (Vaciado).</p>
+                    </li>
+                    <li>
+                        <strong>Orbitar y Seleccionar Cara</strong>
+                        <p>Use la herramienta "Orbitar" (Orbit) para girar el vaso y poder ver la cara plana superior.</p>
+                    </li>
+                    <li>
+                        <strong>Aplicar Shell</strong>
+                        <p>Haga clic en la cara plana superior del vaso. Arrastre la flecha o escriba el grosor.</p>
+                    </li>
+                    <li>
+                        <strong>Definir Espesor del Vaciado</strong>
+                        <p>Establezca la distancia (grosor) en 0.125 pulgadas [3.175 milímetros] y haga clic en "Aceptar". El vaso ahora está hueco.</p>
+                    </li>
+                    <li>
+                        <strong>Seleccionar Herramienta Fillet (Empalme)</strong>
+                        <p>Vaya al menú "Modificar" (Modify) y elija "Fillet" (Empalme).</p>
+                    </li>
+                    <li>
+                        <strong>Orbitar y Seleccionar Borde</strong>
+                        <p>Use "Orbitar" para ver la parte inferior del vaso. Seleccione el borde inferior exterior (la esquina aguda de abajo).</p>
+                    </li>
+                    <li>
+                        <strong>Definir Radio del Redondeo</strong>
+                        <p>Establezca el radio en 0.125 pulgadas [3.175 milímetros] y presione Intro.</p>
+                    </li>
+                    <li>
+                        <strong>Finalizar y Guardar</strong>
+                        <p>Haga clic en el icono "Home" (la casa) en el ViewCube para volver a la vista isométrica predeterminada. Guarde el archivo.</p>
+                    </li>
+                </ol>
+            </section>
+        </main>
+
+        <footer>
+            <p>Material educativo del curso de Ingeniería Industrial.</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
