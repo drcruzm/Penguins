@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica 1-2</title>
+    
+    <style>
+        :root {
+            --naranja-principal: #E65100; /* Naranja oscuro para títulos */
+            --naranja-secundario: #FB8C00; /* Naranja medio para acentos */
+            --fondo-claro: #FFF3E0;      /* Un fondo crema/naranja muy claro */
+            --texto-oscuro: #333;
+            --fondo-blanco: #FFFFFF;
+            --borde-sutil: #FFD180;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            background-color: var(--fondo-claro);
+            color: var(--texto-oscuro);
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            background-color: var(--fondo-blanco);
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            overflow: hidden; /* Para contener los bordes redondeados */
+        }
+
+        header {
+            background-color: var(--naranja-principal);
+            color: var(--fondo-blanco);
+            padding: 25px 30px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.2em;
+        }
+
+        main {
+            padding: 30px;
+        }
+
+        .video-wrapper {
+            margin-bottom: 30px;
+            border: 1px solid var(--borde-sutil);
+            border-radius: 8px;
+            overflow: hidden; /* Para que el video respete el borde redondeado */
+        }
+
+        video {
+            width: 100%;
+            display: block;
+        }
+
+        .contenido-wrapper {
+            border-top: 3px solid var(--naranja-secundario);
+            padding-top: 20px;
+        }
+
+        .contenido-wrapper h2, .contenido-wrapper h3 {
+            color: var(--naranja-principal);
+            margin-bottom: 15px;
+        }
+
+        .contenido-wrapper h2 {
+            font-size: 1.8em;
+        }
+
+        .contenido-wrapper h3 {
+            font-size: 1.5em;
+            margin-top: 25px;
+        }
+
+        .contenido-wrapper p {
+            font-size: 1.05em;
+            margin-bottom: 15px;
+        }
+
+        /* Estilo para la lista de objetivos */
+        .objetivos-lista {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 15px;
+        }
+
+        .objetivos-lista li {
+            position: relative;
+            padding-left: 35px;
+            margin-bottom: 12px;
+            font-size: 1.05em;
+        }
+
+        .objetivos-lista li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: var(--naranja-secundario);
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        
+        /* --- NUEVO ESTILO PARA PASO A PASO --- */
+        .step-list {
+            list-style: none;
+            padding-left: 0;
+            counter-reset: step-counter; /* Inicia el contador de pasos */
+            margin-top: 20px;
+        }
+
+        .step-list li {
+            position: relative;
+            padding-left: 65px; /* Espacio para el número */
+            margin-bottom: 20px;
+            background-color: #fdfaf6; /* Un fondo muy sutil */
+            border: 1px solid var(--borde-sutil);
+            border-radius: 8px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            padding-right: 15px;
+        }
+
+        .step-list li::before {
+            content: counter(step-counter); /* Muestra el número del contador */
+            counter-increment: step-counter; /* Incrementa el contador */
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.6em;
+            font-weight: 700;
+            color: var(--naranja-principal);
+            background-color: var(--fondo-claro);
+            width: 36px;
+            height: 36px;
+            line-height: 36px;
+            text-align: center;
+            border-radius: 50%;
+        }
+
+        .step-list li strong {
+            display: block;
+            font-size: 1.15em;
+            color: var(--texto-oscuro);
+            margin-bottom: 5px;
+        }
+
+        .step-list li p {
+            margin: 0;
+            font-size: 1em;
+            line-height: 1.5;
+        }
+        /* --- FIN DE NUEVO ESTILO --- */
+
+
+        /* Estilo para el cuestionario */
+        .cuestionario-box {
+            background-color: var(--fondo-claro);
+            padding: 15px 20px;
+            border-left: 5px solid var(--naranja-secundario);
+            border-radius: 4px;
+            margin-top: 15px;
+        }
+        
+        .cuestionario-box p {
+            margin: 0;
+            font-style: italic;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em;
+            color: #777;
+            background-color: #f9f9f9;
+            border-top: 1px solid #eee;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <header>
+            <h1>Practica 1-2: Crear un Boceto Totalmente Restringido</h1>
+        </header>
+
+        <main>
+            <section class="video-wrapper">
+                <video controls preload="metadata">
+                    <source src="Paso 1-2.webm" type="video/webm">
+                    Tu navegador no soporta el formato de video WEBM.
+                </video>
+            </section>
+
+            <section class="contenido-wrapper">
+                
+                <h2>Descripción y Objetivos</h2>
+                
+                <p>Comience un diseño dibujando una taza de vaso. Creará el boceto y, a continuación, aprenderá sobre las restricciones geométricas y cómo se utilizan para facilitar el proceso. Añada y edite cotas al boceto.</p>
+
+                <h3>Objetivos de Aprendizaje</h3>
+                <p>Después de completar este video, podrás:</p>
+                <ul class="objetivos-lista">
+                    <li>Crear un boceto bidimensional.</li>
+                    <li>Aplicar cotas y restricciones.</li>
+                    <li>Crear geometría de boceto, como líneas.</li>
+                    <li>Crear un boceto totalmente restringido.</li>
+                </ul>
+
+                <h3>Metodología Paso a Paso</h3>
+
+                <ol class="step-list">
+                    <li>
+                        <strong>Preparar el Proyecto</strong>
+                        <p>En el Panel de Datos, asegúrate de estar en el proyecto y la carpeta correctos.</p>
+                    </li>
+                    <li>
+                        <strong>Configurar las Unidades</strong>
+                        <p>Expande "Configuración del Documento" en el navegador. Haz clic en el icono de edición junto a "Unidades" y selecciona "Pulgadas" (o milímetros).</p>
+                    </li>
+                    <li>
+                        <strong>Guardar el Diseño</strong>
+                        <p>Guarda el diseño con un nombre, por ejemplo, "Mi vaso".</p>
+                    </li>
+                    <li>
+                        <strong>Optimizar el Espacio</strong>
+                        <p>Oculta el Panel de Datos para maximizar tu lienzo.</p>
+                    </li>
+                    <li>
+                        <strong>Iniciar un Boceto</strong>
+                        <p>En el grupo "Crear" de la barra de herramientas, haz clic en "Crear Boceto".</p>
+                    </li>
+                    <li>
+                        <strong>Seleccionar un Plano</strong>
+                        <p>Para entrar al modo de boceto, debes elegir un plano. Selecciona el plano XY (el que se ve "desde arriba" o "de frente" según la vista).</p>
+                    </li>
+                    <li>
+                        <strong>Dibujar Línea Vertical (Eje)</strong>
+                        <p>Usa la herramienta "Línea" (tecla "L") y dibuja una línea vertical comenzando desde el origen (0,0).</p>
+                    </li>
+                    <li>
+                        <strong>Acotar la Línea Vertical</strong>
+                        <p>Asigna una dimensión de 9 pulgadas (228.6 mm) a esta línea y presiona Intro. Si no lo hiciste, usa la tecla "D" para acotar.</p>
+                    </li>
+                    <li>
+                        <strong>Dibujar Línea Base (Inferior)</strong>
+                        <p>Usa "Línea" (L) de nuevo. Comienza en el origen (0,0) y dibuja una línea horizontal hacia la derecha de 2 pulgadas (50.8 mm).</p>
+                    </li>
+                    <li>
+                        <strong>Dibujar Línea Superior</strong>
+                        <p>Ve al punto final de la línea vertical de 9 pulgadas. Dibuja una línea horizontal hacia la derecha de 3 pulgadas (76.2 mm).</p>
+                    </li>
+                    <li>
+                        <strong>Dibujar Línea Inclinada (Perfil)</strong>
+                        <p>Dibuja una línea que conecte el final de la línea superior (Paso 10) con el final de la línea base (Paso 9) para cerrar el perfil.</p>
+                    </li>
+                    <li>
+                        <strong>Finalizar el Boceto</strong>
+                        <p>Haz clic en el botón "Finalizar Boceto" en la barra de herramientas.</p>
+                    </li>
+                    <li>
+                        <strong>Verificar el Boceto</strong>
+                        <p>Observa que las líneas del boceto ahora son negras y el interior de la forma tiene un tono azul. Esto significa que el boceto está "totalmente restringido".</p>
+                    </li>
+                    <li>
+                        <strong>Confirmar Restricción</strong>
+                        <p>En el navegador de la izquierda, expande la carpeta "Bocetos". Verás un símbolo de candado junto a tu boceto, confirmando que está totalmente restringido.</p>
+                    </li>
+                    <li>
+                        <strong>Guardar el Progreso</strong>
+                        <p>Haz clic en "Guardar" en la barra de aplicaciones.</p>
+                    </li>
+                </ol>
+                <h3>Cuestionario de Video</h3>
+                <div class="cuestionario-box">
+                    <p>Un equipo de diseño robótico necesita hacer las dimensiones del archivo de diseño en unidades imperiales. ¿A dónde deben ir los miembros para cambiar de unidades métricas?</p>
+                </div>
+
+            </section>
+        </main>
+
+        <footer>
+            <p>Material educativo del curso de Ingeniería Industrial.</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
