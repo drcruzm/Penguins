@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprende Fusion para CAD</title>
+    
+    <style>
+        :root {
+            --naranja-principal: #E65100; /* Naranja oscuro para títulos */
+            --naranja-secundario: #FB8C00; /* Naranja medio para acentos */
+            --fondo-claro: #FFF3E0;      /* Un fondo crema/naranja muy claro */
+            --texto-oscuro: #333;
+            --fondo-blanco: #FFFFFF;
+            --borde-sutil: #FFD180;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            background-color: var(--fondo-claro);
+            color: var(--texto-oscuro);
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            background-color: var(--fondo-blanco);
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            overflow: hidden; /* Para contener los bordes redondeados */
+        }
+
+        header {
+            background-color: var(--naranja-principal);
+            color: var(--fondo-blanco);
+            padding: 25px 30px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.2em;
+        }
+
+        main {
+            padding: 30px;
+        }
+
+        .video-wrapper {
+            margin-bottom: 30px;
+            border: 1px solid var(--borde-sutil);
+            border-radius: 8px;
+            overflow: hidden; /* Para que el video respete el borde redondeado */
+        }
+
+        video {
+            width: 100%;
+            display: block;
+        }
+
+        .transcripcion {
+            border-top: 3px solid var(--naranja-secundario);
+            padding-top: 20px;
+        }
+
+        .transcripcion h2 {
+            color: var(--naranja-principal);
+            font-size: 1.8em;
+            margin-bottom: 20px;
+        }
+
+        .transcripcion p {
+            font-size: 1.1em;
+            margin-bottom: 15px;
+        }
+
+        /* Estilo para la lista de objetivos */
+        .objetivos-lista {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 25px;
+        }
+
+        .objetivos-lista li {
+            position: relative;
+            padding-left: 35px;
+            margin-bottom: 12px;
+            font-size: 1.05em;
+        }
+
+        /* Icono de "check" personalizado con el color naranja */
+        .objetivos-lista li::before {
+            content: '✓'; /* Puedes cambiar esto por '►' o '•' */
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: var(--naranja-secundario);
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em;
+            color: #777;
+            background-color: #f9f9f9;
+            border-top: 1px solid #eee;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <header>
+            <h1>Bienvenido a: Aprende Fusion para CAD en 90 Minutos</h1>
+        </header>
+
+        <main>
+            <section class="video-wrapper">
+                <video controls preload="metadata">
+                    <source src="Paso 1-1.webm" type="video/webm">
+                    Tu navegador no soporta el formato de video WEBM.
+                </video>
+            </section>
+
+            <section class="transcripcion">
+                <h2>Transcripción y Objetivos de Aprendizaje</h2>
+                
+                <p>En este curso, aprenderás las habilidades básicas para usar Fusion en el diseño asistido por computadora. En aproximadamente 90 minutos, aprenderás a navegar por la interfaz de Fusion y a crear y gestionar archivos de diseño.</p>
+                
+                <p>Descubrirás cómo crear bocetos totalmente restringidos, crear componentes y ensamblajes, modificar modelos 3D, generar renders de productos y exportar archivos de diseño para impresión 3D.</p>
+
+                <p>Usa los conjuntos de datos adjuntos para seguirnos mientras creamos un vaso para bebidas. Para práctica adicional, utiliza los ejercicios y conjuntos de datos para crear un posavasos, una mesa y un render con tus diseños.</p>
+
+                <h3>Al completar este curso, serás capaz de:</h3>
+
+                <ul class="objetivos-lista">
+                    <li>Navegar por la interfaz de Fusion.</li>
+                    <li>Usar las herramientas de navegación y visualización.</li>
+                    <li>Crear y gestionar archivos de diseño.</li>
+                    <li>Crear bocetos y crear modelos 3D a partir de bocetos.</li>
+                    <li>Modificar piezas con características clave, incluyendo extrusión, revolución, vaciado y barrido.</li>
+                    <li>Crear componentes y aplicar uniones de ensamblaje para un movimiento adecuado.</li>
+                    <li>Crear un dibujo dimensionado de un componente.</li>
+                    <li>Aplicar configuraciones visuales y renderizar un entorno de proyecto.</li>
+                    <li>Compartir diseños y exportar archivos de diseño para impresión 3D.</li>
+                </ul>
+
+            </section>
+        </main>
+
+        <footer>
+            <p>Material educativo del curso de Ingeniería Industrial.</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
